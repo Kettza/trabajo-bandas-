@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+}
+ * {
+    box-sizing: border-box;
+ }
+ body {
+    background: #111;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+ }
+.gallery {
+    position: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+/* Cabecera */
+header {
+    background-color: #1e1e1e;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Navegación */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #272727;
+    padding: 10px;
+}
+
+nav a {
+    color: #ffffff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ff69b4;
+}
+
+/* Contenido principal */
+main {
+
+}
+button {
+    background: black;
+    cursor: pointer;
+    border: none;
+    padding: 16px 32px;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 12px;
+ }
+ button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, red, blue, deeppink, blue,
+    red, blue, deeppink, blue);
+    background-size: 800%;
+    border-radius: 10px;
+    filter: blur(8px);
+    animation: glowing 20s linear infinite
+ }
+ @keyframes glowing {
+    0% {
+        background-position: 0 0 
+    }
+    50% {
+        background-position: 400% 0
+    }
+    100% {
+        background-position: 0 0 
+    }
+ }
+section {
+   
+    margin-bottom: 40px;
+}
+
+section h2 {
+    border-bottom: 2px solid #ff5252;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+/* Galería */
+section {
+    display: flex;
+    width: 600px;
+    height: 430px;
+}
+section img  {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+section img:hover {
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+/* Reproductor de música */
+.player audio {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 10px;
+}
+
+/* Pie de página */
+footer {
+    background-color: #1e1e1e;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
